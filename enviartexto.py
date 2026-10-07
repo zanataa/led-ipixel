@@ -11,6 +11,7 @@ WRITE_UUID = "0000fa02-0000-1000-8000-00805f9b34fb"
 
 
 FONT_MAP = {
+
     # MAIÚSCULAS
     "A": bytes.fromhex("1c366363637f63636363"),
     "B": bytes.fromhex("3f6666663e666666663f"),
@@ -40,39 +41,60 @@ FONT_MAP = {
     "Z": bytes.fromhex("7f636130180c0643637f"),
 
     # MINÚSCULAS
-    "a": bytes.fromhex("001e303e33333b6e00"),
+    "a": bytes.fromhex("001e303e33333b6e0000"),
     "b": bytes.fromhex("0706063e66666666663f"),
-    "c": bytes.fromhex("00003e63030303633e"),
-    "d": bytes.fromhex("3830303e333333337e"),
-    "e": bytes.fromhex("00003e63637f03633e"),
+    "c": bytes.fromhex("00003e63030303633e00"),
+    "d": bytes.fromhex("3830303e333333337e00"),
+    "e": bytes.fromhex("00003e63637f03633e00"),
     "f": bytes.fromhex("386c0c0c3f0c0c0c0c1e"),
-    "g": bytes.fromhex("00006e736363736e60633e"),
+    "g": bytes.fromhex("006e736363736e60633e"),
     "h": bytes.fromhex("0706063e666666666667"),
     "i": bytes.fromhex("1818001c18181818183c"),
-    "j": bytes.fromhex("30300038303030303033331e"),
+    "j": bytes.fromhex("30383030303030303333"),
     "k": bytes.fromhex("0706066666361e366667"),
     "l": bytes.fromhex("18181818181818181838"),
     "m": bytes.fromhex("0000367f6b6b63636363"),
     "n": bytes.fromhex("0000003b666666666666"),
     "o": bytes.fromhex("00003e6363636363633e"),
     "p": bytes.fromhex("00003b6666663e06060f"),
-    "q": bytes.fromhex("00006e33333333333e303078"),
-    "r": bytes.fromhex("00003b66060606060f"),
-    "s": bytes.fromhex("00003e63033e60633e"),
+    "q": bytes.fromhex("006e33333333333e3030"),
+    "r": bytes.fromhex("00003b66060606060f00"),
+    "s": bytes.fromhex("00003e63033e60633e00"),
     "t": bytes.fromhex("0c0c0c3f0c0c0c0c6c38"),
     "u": bytes.fromhex("0000333333333333336e"),
     "v": bytes.fromhex("00006363636363361c08"),
     "w": bytes.fromhex("000063636b6b6b7f3600"),
     "x": bytes.fromhex("00006363361c36636300"),
-    "y": bytes.fromhex("000063636363733360633e"),
-    "z": bytes.fromhex("7f6130180c06467f"),
+    "y": bytes.fromhex("0063636363733360633e"),
+    "z": bytes.fromhex("7f6130180c06467f0000"),
 
     # ESPAÇO
     " ": bytes(10),
 
+    # DÍGITOS
+    "0": bytes.fromhex("3c66c3c3c3c3c3c3663c"),
+    "1": bytes.fromhex("1838781818181818187e"),
+    "2": bytes.fromhex("3c66c303060c183060ff"),
+    "3": bytes.fromhex("3c6603033e0303c3663c"),
+    "4": bytes.fromhex("060f1b3363c3ff030303"),
+    "5": bytes.fromhex("ffc0c0c0fe030303663c"),
+    "6": bytes.fromhex("3c60c0c0fec3c3c3663c"),
+    "7": bytes.fromhex("ff03060c0c1818303000"),
+    "8": bytes.fromhex("3c66c3663c66c3c3663c"),
+    "9": bytes.fromhex("3c66c3c37f0303060c3c"),
+
     # PONTUAÇÃO
-    "!": bytes.fromhex("0000001e303e33333b6e00"),
+    "!": bytes.fromhex("0000001e303e33333b6e"),
     "?": bytes.fromhex("183c3c3c3c1818001818"),
+    ".": bytes.fromhex("00000000000000000018"),
+    ",": bytes.fromhex("00000000000000001830"),
+    ":": bytes.fromhex("00000018180000181800"),
+    "-": bytes.fromhex("00000000007e00000000"),
+    "'": bytes.fromhex("18183000000000000000"),
+    '"': bytes.fromhex("66666600000000000000"),
+    "(": bytes.fromhex("0c183030303030180c00"),
+    ")": bytes.fromhex("30180c0c0c0c0c183000"),
+    "/": bytes.fromhex("03060c18303060c00000"),
 }
 
 
@@ -138,10 +160,10 @@ def generate_write_5(text, seq, rgb):
 
 async def main():
 
-    texto = "HELLO WORLD"
+    texto = "THE DREAM IS NOT DEAD"
 
     # COR
-    rgb = (0, 255, 0)
+    rgb = (157, 0, 255)
 
     # ================================================
     # WRITE 1
